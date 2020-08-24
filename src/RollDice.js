@@ -14,16 +14,12 @@ class RollDice extends Component {
     ],
   };
 
-  state = { diceOne: 0, diceTwo: 0, anim: 1 };
+  state = { diceOne: 0, diceTwo: 0 };
 
   handleRand = () => {
     let rand1 = Math.floor(Math.random() * 6);
     let rand2 = Math.floor(Math.random() * 6);
     this.setState({ diceOne: rand1, diceTwo: rand2 });
-  };
-
-  handleAnim = () => {
-    this.setState({ anim: 1 });
   };
 
   render() {
@@ -35,7 +31,7 @@ class RollDice extends Component {
         </div>
         <button
           className="button"
-          onClick={this.handleAnim && this.handleRand}
+          onClick={this.handleRand}
           onAnimationEnd={this.state.anim}
         >
           Roll Dice...
