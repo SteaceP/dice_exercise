@@ -29,11 +29,7 @@ class RollDice extends Component {
           <Die face={[...this.props.die]} random={this.state.diceOne} />
           <Die face={[...this.props.die]} random={this.state.diceTwo} />
         </div>
-        <button
-          className="button"
-          onClick={this.handleRand}
-          onAnimationEnd={this.state.anim}
-        >
+        <button className="button" onClick={this.handleRand}>
           Roll Dice...
         </button>
       </>
